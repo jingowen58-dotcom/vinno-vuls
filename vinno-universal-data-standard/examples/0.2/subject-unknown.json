@@ -1,0 +1,13 @@
+{
+  "vuls_version": "0.2.0",
+  "record_type": "subject",
+  "subject_id": "synthetic-dog-unknown",
+  "species": "Canis lupus familiaris",
+  "sex": "unknown",
+  "age_information": {
+    "status": "unknown",
+    "birth_date": null,
+    "birth_date_precision": "unknown",
+    "age_estimate": null
+  }
+}

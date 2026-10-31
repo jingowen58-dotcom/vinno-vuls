@@ -1,0 +1,9 @@
+{
+  "vuls_version": "0.2.0",
+  "record_type": "enrollment",
+  "enrollment_id": "enroll-synthetic-dog-001",
+  "subject_id": "synthetic-dog-001",
+  "study_id": "dog-aging-001",
+  "enrolled_on": "2026-01-01",
+  "status": "active"
+}

@@ -1,0 +1,15 @@
+{
+  "vuls_version": "0.2.0",
+  "record_type": "study",
+  "study_id": "dog-aging-001",
+  "title": "Synthetic canine weight follow-up",
+  "description": "Fictional records for testing longitudinal links. Not a real study.",
+  "research_type": "observational",
+  "species": [
+    "Canis lupus familiaris"
+  ],
+  "start_date": "2026-01-01",
+  "end_date": null,
+  "ethics_status": "not_applicable",
+  "study_status": "active"
+}

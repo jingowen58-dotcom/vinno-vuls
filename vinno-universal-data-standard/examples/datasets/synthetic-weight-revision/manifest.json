@@ -1,0 +1,57 @@
+{
+  "manifest_version": "0.2.0",
+  "dataset_id": "synthetic-weight-revision",
+  "dataset_name": "Synthetic weight revision",
+  "dataset_version": "1.0.0",
+  "vuls_version": "0.2.0",
+  "study_ids": [
+    "dog-aging-001"
+  ],
+  "subject_count": 1,
+  "observation_count": 1,
+  "source": "Synthetic demonstration dataset",
+  "licence": "CC0-1.0",
+  "publication_status": "open",
+  "permitted_uses": [
+    "research"
+  ],
+  "limitations": "Fictional correction of one weighing. Historical versions stay in the snapshot and are not current observations.",
+  "files": [
+    {
+      "path": "subjects/synthetic-dog-001.json",
+      "sha256": "77373f5356463be47cac309f8bc945f3b24be3e5aeafa3ae3b78acc7eee57746",
+      "record_id": null,
+      "revision_id": null
+    },
+    {
+      "path": "studies/dog-aging-001.json",
+      "sha256": "3e0ec058c316cfb9b43547704c69054c19dbbc3ac4ae242b580d0f67ca56685b",
+      "record_id": null,
+      "revision_id": null
+    },
+    {
+      "path": "enrollments/synthetic-dog-001--dog-aging-001.json",
+      "sha256": "b84d3f71bdf8428f523c03a6fb54da4e1b18e938af13c4fb9f145776ca9d0a34",
+      "record_id": null,
+      "revision_id": null
+    },
+    {
+      "path": "observations/weight-2026-02-01-r1.json",
+      "sha256": "b7d9f8484e715b6c613ba0fde8628de345802b729d4b1900774fe2a4fb4d808a",
+      "record_id": "weight-2026-02-01",
+      "revision_id": "rev-weight-1"
+    },
+    {
+      "path": "observations/weight-2026-02-01-r2.json",
+      "sha256": "0d75e5dbe8ecae2d8cb6fb8a12847436ea48c8c54ebc96924d2b44f98f189271",
+      "record_id": "weight-2026-02-01",
+      "revision_id": "rev-weight-2"
+    },
+    {
+      "path": "observations/weight-2026-02-01-r3.json",
+      "sha256": "03bb940b82b949d806a8a0946f1b74ed49999252761699c9ba76069fcb0408cc",
+      "record_id": "weight-2026-02-01",
+      "revision_id": "rev-weight-3"
+    }
+  ]
+}

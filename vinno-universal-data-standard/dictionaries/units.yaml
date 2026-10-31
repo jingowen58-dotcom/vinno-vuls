@@ -1,0 +1,16 @@
+version: "0.1.0"
+units:
+  kg: {dimension: mass, canonical: true}
+  g: {dimension: mass, canonical: false}
+  mg: {dimension: mass, canonical: false}
+  mmol/L: {dimension: concentration}
+  umol/L: {dimension: concentration}
+  min/day: {dimension: time_rate}
+  h/day: {dimension: time_rate}
+  g/day: {dimension: mass_rate}
+  kg/day: {dimension: mass_rate}
+  year: {dimension: age}
+  month: {dimension: age}
+  week: {dimension: age}
+  day: {dimension: age}
+  score_1_9: {dimension: ordinal_score, system: "1-9"}

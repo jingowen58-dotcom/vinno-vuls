@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vinno:vuls:0.2.0:enrollment",
+  "title": "VULS 0.2 Enrollment",
+  "description": "Links one subject to one study. A dog may enroll in several studies, and a study may include several dogs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vuls_version",
+    "record_type",
+    "enrollment_id",
+    "subject_id",
+    "study_id",
+    "enrolled_on",
+    "status"
+  ],
+  "properties": {
+    "vuls_version": { "const": "0.2.0" },
+    "record_type": { "const": "enrollment" },
+    "enrollment_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "study_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "enrolled_on": { "type": "string", "format": "date" },
+    "status": { "enum": ["active", "withdrawn", "completed"] }
+  }
+}

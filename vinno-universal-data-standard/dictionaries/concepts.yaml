@@ -1,0 +1,45 @@
+version: "0.1.0"
+concepts:
+  body_weight:
+    label: "Body weight"
+    value_type: "number"
+    allowed_units: ["g", "kg"]
+    minimum_exclusive: 0
+    domain: "body_composition"
+    species_profile: ["Canis lupus familiaris"]
+    notes: "Record the measured value and unit. Do not convert units inside the record."
+  body_condition_score:
+    label: "Body condition score"
+    value_type: "number"
+    allowed_units: ["score_1_9"]
+    minimum: 1
+    maximum: 9
+    integer: true
+    domain: "body_composition"
+    species_profile: ["Canis lupus familiaris"]
+    notes: "A 1–9 label supplied by the recorder. VULS does not define how the score was judged, and scores from other scales are not interchangeable."
+  food_intake:
+    label: "Food intake"
+    value_type: "number"
+    allowed_units: ["g/day", "kg/day"]
+    minimum: 0
+    domain: "nutrition"
+    species_profile: ["Canis lupus familiaris"]
+  activity_duration:
+    label: "Activity duration"
+    value_type: "number"
+    allowed_units: ["h/day", "min/day"]
+    minimum: 0
+    domain: "function"
+    species_profile: ["Canis lupus familiaris"]
+  stool_consistency:
+    label: "Stool consistency"
+    value_type: "string"
+    allowed_units: []
+    allowed_values: ["formed", "loose", "soft", "watery"]
+    domain: "gastrointestinal"
+    species_profile: ["Canis lupus familiaris"]
+    system: "VINNO_STOOL_CATEGORY_0.1"
+    status: "provisional"
+    clinical_validation: false
+    notes: "Provisional VINNO categories. Not a validated clinical fecal score, and not interchangeable with another chart."

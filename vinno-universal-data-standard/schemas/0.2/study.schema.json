@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vinno:vuls:0.2.0:study",
+  "title": "VULS 0.2 Study",
+  "description": "A research project that groups observations. ethics_status is a recorder label, not proof of ethics-board approval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vuls_version",
+    "record_type",
+    "study_id",
+    "title",
+    "research_type",
+    "species",
+    "start_date",
+    "ethics_status",
+    "study_status"
+  ],
+  "properties": {
+    "vuls_version": { "const": "0.2.0" },
+    "record_type": { "const": "study" },
+    "study_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "title": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "description": { "type": ["string", "null"], "maxLength": 2000 },
+    "research_type": { "enum": ["observational"] },
+    "species": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["Canis lupus familiaris"] }
+    },
+    "start_date": { "type": "string", "format": "date" },
+    "end_date": { "type": ["string", "null"], "format": "date" },
+    "ethics_status": { "enum": ["not_reviewed", "not_applicable", "reviewed"] },
+    "study_status": { "enum": ["planned", "active", "completed"] }
+  }
+}

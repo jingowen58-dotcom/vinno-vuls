@@ -1,0 +1,43 @@
+{
+  "vuls_version": "0.1.0",
+  "record_id": "example-invalid-unit-missing",
+  "subject": {
+    "subject_id": "synthetic-dog-001",
+    "species": "Canis lupus familiaris",
+    "breed": "Golden Retriever",
+    "sex": "female",
+    "age": {
+      "value": 8,
+      "unit": "year",
+      "estimated_on": "2026-10-31"
+    }
+  },
+  "observation": {
+    "concept": "body_weight",
+    "value": 28.5,
+    "observed_at": "2026-10-31T09:00:00Z"
+  },
+  "method": {
+    "method_type": "direct_measurement",
+    "method_name": "Example calibrated scale"
+  },
+  "provenance": {
+    "source_type": "research_collected",
+    "source_name": "Synthetic demonstration dataset"
+  },
+  "quality": {
+    "status": "unverified",
+    "completeness": "complete",
+    "flags": [
+      "synthetic_example"
+    ]
+  },
+  "permission": {
+    "publication_status": "open",
+    "permitted_uses": [
+      "research",
+      "public_redistribution"
+    ],
+    "licence": "CC0-1.0"
+  }
+}

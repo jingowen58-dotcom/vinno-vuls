@@ -1,0 +1,64 @@
+{
+  "manifest_version": "0.2.0",
+  "dataset_id": "synthetic-weight-follow-up",
+  "dataset_name": "Synthetic weight follow-up",
+  "dataset_version": "1.0.0",
+  "vuls_version": "0.2.0",
+  "study_ids": [
+    "dog-aging-001"
+  ],
+  "subject_count": 1,
+  "observation_count": 4,
+  "source": "Synthetic demonstration dataset",
+  "licence": "CC0-1.0",
+  "publication_status": "open",
+  "permitted_uses": [
+    "public_redistribution",
+    "research"
+  ],
+  "limitations": "Fictional weights for one dog. These records have no revision history and are not a scientific result.",
+  "files": [
+    {
+      "path": "subjects/synthetic-dog-001.json",
+      "sha256": "77373f5356463be47cac309f8bc945f3b24be3e5aeafa3ae3b78acc7eee57746",
+      "record_id": null,
+      "revision_id": null
+    },
+    {
+      "path": "studies/dog-aging-001.json",
+      "sha256": "3e0ec058c316cfb9b43547704c69054c19dbbc3ac4ae242b580d0f67ca56685b",
+      "record_id": null,
+      "revision_id": null
+    },
+    {
+      "path": "enrollments/synthetic-dog-001--dog-aging-001.json",
+      "sha256": "b84d3f71bdf8428f523c03a6fb54da4e1b18e938af13c4fb9f145776ca9d0a34",
+      "record_id": null,
+      "revision_id": null
+    },
+    {
+      "path": "observations/weight-2026-01-01.json",
+      "sha256": "219ba54341d4f35cae02d2244e97bc350dd7fb660f83cfb5e08c5a3247232c31",
+      "record_id": "weight-2026-01-01",
+      "revision_id": null
+    },
+    {
+      "path": "observations/weight-2026-04-01.json",
+      "sha256": "00fe91e2db39ee07192f44d96a8083d4fee52a7bdb523ead6e8c8a12ea5c4984",
+      "record_id": "weight-2026-04-01",
+      "revision_id": null
+    },
+    {
+      "path": "observations/weight-2026-07-01.json",
+      "sha256": "e757468070526ac03110f6618a71f2dba05c88fdf8753284448029adc1f905c5",
+      "record_id": "weight-2026-07-01",
+      "revision_id": null
+    },
+    {
+      "path": "observations/weight-2026-10-01.json",
+      "sha256": "3db9a3b7284ff5345ee156bb66284fe70329582e693f83b5d08125171561ed22",
+      "record_id": "weight-2026-10-01",
+      "revision_id": null
+    }
+  ]
+}

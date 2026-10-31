@@ -1,0 +1,44 @@
+{
+  "vuls_version": "0.1.0",
+  "record_id": "example-bcs-0001",
+  "subject": {
+    "subject_id": "synthetic-dog-001",
+    "species": "Canis lupus familiaris",
+    "breed": "Golden Retriever",
+    "sex": "female",
+    "age": {
+      "value": 8,
+      "unit": "year",
+      "estimated_on": "2026-10-31"
+    }
+  },
+  "observation": {
+    "concept": "body_condition_score",
+    "value": 5,
+    "unit": "score_1_9",
+    "observed_at": "2026-10-31T10:00:00Z"
+  },
+  "method": {
+    "method_type": "owner_reported",
+    "method_name": "Owner selected a 1-9 label"
+  },
+  "provenance": {
+    "source_type": "owner_reported",
+    "source_name": "Synthetic demonstration dataset"
+  },
+  "quality": {
+    "status": "unverified",
+    "completeness": "complete",
+    "flags": [
+      "synthetic_example"
+    ]
+  },
+  "permission": {
+    "publication_status": "open",
+    "permitted_uses": [
+      "research",
+      "public_redistribution"
+    ],
+    "licence": "CC0-1.0"
+  }
+}

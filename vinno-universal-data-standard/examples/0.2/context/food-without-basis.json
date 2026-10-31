@@ -1,0 +1,35 @@
+{
+  "vuls_version": "0.2.0",
+  "record_type": "observation",
+  "record_id": "food-without-basis",
+  "subject_id": "synthetic-dog-001",
+  "study_id": "dog-aging-001",
+  "observation": {
+    "concept": "food_intake",
+    "value": 280,
+    "observed_at": "2026-10-01T09:00:00Z",
+    "unit": "g/day"
+  },
+  "method": {
+    "method_type": "owner_reported",
+    "method_name": "Owner measurement"
+  },
+  "provenance": {
+    "source_type": "owner_reported",
+    "source_name": "Synthetic demonstration dataset"
+  },
+  "quality": {
+    "status": "unverified",
+    "completeness": "complete",
+    "flags": [
+      "synthetic_example"
+    ]
+  },
+  "permission": {
+    "publication_status": "open",
+    "permitted_uses": [
+      "research"
+    ],
+    "licence": "CC0-1.0"
+  }
+}

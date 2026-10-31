@@ -1,0 +1,10 @@
+version: "0.1.0"
+species:
+  - scientific_name: "Canis lupus familiaris"
+    common_name_en: "Domestic dog"
+    common_name_zh: "家犬"
+    profile_status: "initial"
+  - scientific_name: "Felis catus"
+    common_name_en: "Domestic cat"
+    common_name_zh: "家猫"
+    profile_status: "planned"

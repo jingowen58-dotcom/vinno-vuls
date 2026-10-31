@@ -1,0 +1,37 @@
+{
+  "vuls_version": "0.2.0",
+  "record_type": "observation",
+  "record_id": "weight-2026-01-01",
+  "subject_id": "synthetic-dog-001",
+  "study_id": "dog-aging-001",
+  "observation": {
+    "concept": "body_weight",
+    "value": 28.5,
+    "unit": "kg",
+    "observed_at": "2026-01-01T09:00:00Z"
+  },
+  "method": {
+    "method_type": "direct_measurement",
+    "method_name": "Example calibrated scale",
+    "instrument": "Example scale"
+  },
+  "provenance": {
+    "source_type": "research_collected",
+    "source_name": "Synthetic demonstration dataset"
+  },
+  "quality": {
+    "status": "unverified",
+    "completeness": "complete",
+    "flags": [
+      "synthetic_example"
+    ]
+  },
+  "permission": {
+    "publication_status": "open",
+    "permitted_uses": [
+      "research",
+      "public_redistribution"
+    ],
+    "licence": "CC0-1.0"
+  }
+}

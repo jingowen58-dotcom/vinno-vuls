@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vinno:vuls:0.2.0:subject",
+  "title": "VULS 0.2 Subject",
+  "description": "One domestic dog in a longitudinal record set. Age estimates are never converted into a birth date.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vuls_version",
+    "record_type",
+    "subject_id",
+    "species",
+    "sex",
+    "age_information"
+  ],
+  "properties": {
+    "vuls_version": { "const": "0.2.0" },
+    "record_type": { "const": "subject" },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "species": { "enum": ["Canis lupus familiaris"] },
+    "breed": { "type": ["string", "null"], "maxLength": 128 },
+    "sex": { "enum": ["female", "male", "unknown", "not_recorded"] },
+    "subject_status": {
+      "enum": ["active", "deceased", "lost_to_follow_up", "unknown"]
+    },
+    "age_information": { "$ref": "#/$defs/age_information" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "required": ["age_information"],
+        "properties": {
+          "age_information": {
+            "type": "object",
+            "required": ["status"],
+            "properties": { "status": { "const": "known_birth_date" } }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "age_information": {
+            "properties": {
+              "birth_date": { "type": "string", "format": "date" },
+              "birth_date_precision": { "enum": ["exact", "year", "month"] },
+              "age_estimate": { "type": "null" }
+            },
+            "required": ["birth_date", "birth_date_precision", "age_estimate"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "required": ["age_information"],
+        "properties": {
+          "age_information": {
+            "type": "object",
+            "required": ["status"],
+            "properties": { "status": { "const": "estimated" } }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "age_information": {
+            "properties": {
+              "birth_date": { "type": "null" },
+              "birth_date_precision": { "const": "unknown" },
+              "age_estimate": { "type": "object" }
+            },
+            "required": ["birth_date", "birth_date_precision", "age_estimate"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "required": ["age_information"],
+        "properties": {
+          "age_information": {
+            "type": "object",
+            "required": ["status"],
+            "properties": { "status": { "const": "unknown" } }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "age_information": {
+            "properties": {
+              "birth_date": { "type": "null" },
+              "birth_date_precision": { "const": "unknown" },
+              "age_estimate": { "type": "null" }
+            },
+            "required": ["birth_date", "birth_date_precision", "age_estimate"]
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "age_information": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "birth_date", "birth_date_precision", "age_estimate"],
+      "properties": {
+        "status": { "enum": ["known_birth_date", "estimated", "unknown"] },
+        "birth_date": { "type": ["string", "null"], "format": "date" },
+        "birth_date_precision": { "enum": ["exact", "year", "month", "unknown"] },
+        "age_estimate": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["value", "unit", "estimated_at", "estimation_method"],
+          "properties": {
+            "value": { "type": "number", "minimum": 0 },
+            "unit": { "enum": ["day", "week", "month", "year"] },
+            "estimated_at": { "type": "string", "format": "date" },
+            "estimation_method": {
+              "enum": ["owner_reported", "clinician_reported", "records", "unknown"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

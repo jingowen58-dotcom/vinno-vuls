@@ -1,0 +1,15 @@
+{
+  "vuls_version": "0.2.0",
+  "record_type": "subject",
+  "subject_id": "synthetic-dog-001",
+  "species": "Canis lupus familiaris",
+  "breed": "Golden Retriever",
+  "sex": "female",
+  "subject_status": "active",
+  "age_information": {
+    "status": "known_birth_date",
+    "birth_date": "2018-04-12",
+    "birth_date_precision": "exact",
+    "age_estimate": null
+  }
+}
