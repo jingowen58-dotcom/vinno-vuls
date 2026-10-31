@@ -9,6 +9,8 @@
 **项目起点：** Pet Healthspan  
 **长期发展方向：** Animal Longevity → Comparative Aging → Human Healthspan → Global Life Science Network
 
+品牌展示站在 `vinno-website`。它说明方向和规划，不是数据库，也没有账号或下单。页面上的建设状态以本仓库已经落地的 VULS 草案和参考验证工具为准。
+
 ---
 
 # 一、项目总体定位

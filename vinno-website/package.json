@@ -1,0 +1,33 @@
+{
+  "name": "vinno-website",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/vinno-vuls NEXT_PUBLIC_SITE_ORIGIN=https://jingowen58-dotcom.github.io next build",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.4.0",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.554.0",
+    "next": "^15.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/three": "^0.180.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^15.5.6",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3"
+  }
+}

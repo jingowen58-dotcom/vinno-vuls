@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #07111f;
+  --color-bg-secondary: #0b1929;
+  --color-bg-card: #102338;
+  --color-primary: #46c8e8;
+  --color-secondary: #7a9fe8;
+  --color-accent: #67e0d1;
+  --color-ai: #8f86d6;
+  --color-text-primary: #f3f7fb;
+  --color-text-secondary: #9bafc1;
+  --color-text-muted: #657d91;
+  --color-border: rgba(160, 195, 220, 0.16);
+  --color-white: #ffffff;
+  --radius-card: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter), "Noto Sans SC", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.locale-zh {
+  font-family: var(--font-noto), var(--font-inter), sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-space), var(--font-noto), sans-serif;
+}
+
+::selection {
+  background: rgba(70, 200, 232, 0.28);
+  color: var(--color-text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.surface {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.hero-wash {
+  background:
+    radial-gradient(ellipse 50% 42% at 72% 42%, rgba(70, 200, 232, 0.1), transparent 62%),
+    radial-gradient(ellipse 32% 28% at 18% 86%, rgba(103, 224, 209, 0.05), transparent 70%),
+    var(--color-bg);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(160, 195, 220, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(160, 195, 220, 0.045) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at 68% 42%, #000 10%, transparent 68%);
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -160;
+  }
+}
+
+.flow-line {
+  stroke-dasharray: 3 8;
+  animation: flow 12s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
