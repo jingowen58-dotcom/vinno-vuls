@@ -519,16 +519,12 @@ export const en = {
     explore: "Explore",
     business: "Business",
     contact: "Contact",
-    emailMissing: "A public email address has not been issued. The draft standard and reference validator are in the public repository.",
+    company: "杭州玄麒科技有限公司",
+    repositoryNote: "The draft standard and reference validator are in the public repository.",
     repository: "Public repository",
     rights: "© VINNO. All Rights Reserved.",
     privacy: "Privacy Policy",
     terms: "Terms of Use",
-    inquiries: [
-      { title: "Business Cooperation", text: "Commercial conversations are not open on this site." },
-      { title: "Research Collaboration", text: "No research partnership is being accepted through this site." },
-      { title: "General Inquiry", text: "Questions about the draft can start from the public repository." },
-    ],
     engines: {
       health: "VINNO HEALTH",
       healthspan: "VINNO HEALTHSPAN RESEARCH",

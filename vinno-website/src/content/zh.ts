@@ -24,7 +24,7 @@ export const zh = {
   },
   hero: {
     eyebrow: "VINNO | 全球生命科学网络",
-    title: "建设面向生命与健康的开放科研网络。",
+    title: "生命与健康的开放科研网络",
     subtitle: "从宠物健康数据出发，连接生命科学数据、科研智能与全球研究协作。",
     primary: "了解愿景",
     secondary: "查看架构",
@@ -498,16 +498,12 @@ export const zh = {
     explore: "探索",
     business: "业务",
     contact: "联系",
-    emailMissing: "尚未公布公开邮箱。标准草案和参考验证工具在公开仓库中。",
+    company: "杭州玄麒科技有限公司",
+    repositoryNote: "标准草案和参考验证工具在公开仓库中。",
     repository: "公开仓库",
     rights: "© VINNO. 保留所有权利。",
     privacy: "隐私政策",
     terms: "使用条款",
-    inquiries: [
-      { title: "商业合作", text: "本网站不受理商业洽谈。" },
-      { title: "科研协作", text: "本网站不接受科研合作申请。" },
-      { title: "一般咨询", text: "关于草案的问题可以从公开仓库开始。" },
-    ],
     engines: {
       health: "VINNO HEALTH",
       healthspan: "VINNO HEALTHSPAN RESEARCH",

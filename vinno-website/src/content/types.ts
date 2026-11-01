@@ -142,12 +142,12 @@ export type SiteContent = {
     explore: string;
     business: string;
     contact: string;
-    emailMissing: string;
+    company: string;
+    repositoryNote: string;
     repository: string;
     rights: string;
     privacy: string;
     terms: string;
-    inquiries: { title: string; text: string }[];
     engines: Record<EngineId, string>;
   };
   legal: {

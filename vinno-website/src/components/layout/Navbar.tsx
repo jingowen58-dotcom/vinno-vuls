@@ -50,9 +50,9 @@ export function Navbar({ locale, content }: { locale: "en" | "zh"; content: Site
 
   return (
     <header className={cn("fixed inset-x-0 top-0 z-40 border-b transition-colors", scrolled || open ? "border-[var(--color-border)] bg-[rgba(7,17,31,0.86)] backdrop-blur-md" : "border-transparent bg-transparent")}>
-      <div className="mx-auto flex h-[4.5rem] w-full max-w-[1440px] items-center justify-between px-5 md:px-[5vw]">
-        <Link href={`/${locale}/`} aria-label="VINNO">
-          <Logo />
+      <div className="mx-auto flex h-28 w-full max-w-[1440px] items-center justify-between px-5 md:px-[5vw]">
+        <Link href={`/${locale}/`} aria-label="维诺·恩宠 VINNO · ENCHONG">
+          <Logo priority className="h-24" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {content.nav.links.map((link) => (
