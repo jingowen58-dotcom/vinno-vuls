@@ -2,13 +2,16 @@ import { brand } from "@/config/brand";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import type { SiteContent } from "@/content/types";
+import Image from "next/image";
+import { visuals } from "@/lib/media";
 
 export function FutureSection({ locale, content }: { locale: "en" | "zh"; content: SiteContent }) {
   const copy = content.future;
 
   return (
-    <section id="future" className="hero-wash relative overflow-hidden py-24 md:py-36" aria-labelledby="future-title">
-      <div className="hero-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
+    <section id="future" className="relative overflow-hidden py-24 md:py-36" aria-labelledby="future-title">
+      <Image src={visuals.horizon} alt={content.media.horizonAlt} fill sizes="100vw" className="pointer-events-none object-cover" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.2),rgba(7,17,31,0.82))]" />
       <Container className="relative">
         <p className="text-xs tracking-[0.22em] text-[var(--color-primary)]">{copy.index}</p>
         <h2 id="future-title" className="mt-4 max-w-4xl text-4xl leading-[1.1] font-medium tracking-[-0.035em] md:text-6xl">

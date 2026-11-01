@@ -32,7 +32,23 @@ export const en = {
     secondary: "Discover Our Architecture",
     today:
       "What is public today is a draft data standard for domestic dogs and a reference validator. Research databases, the AI engine, and the collaboration network are not in service.",
+    aside: "From Data to Discovery. From Life to Longevity.",
     visualLabel: "Illustrative data network. Not a live map of partners or data sources.",
+  },
+  media: {
+    note: "Illustration. Not a study subject, a partner, or a result.",
+    heroAlt: "An illustrated Earth with a sparse data network and a DNA strand. It is not a map of partners or live data.",
+    layersAlt: "Six glowing plates illustrating the planned research stack. The plates are a diagram, not a running system.",
+    aiAlt: "A network shaped like a brain. It illustrates a future research aid and shows no model output.",
+    worldAlt: "A dark world map with a few connecting lines. The nodes are not institutions or current partners.",
+    horizonAlt: "The curve of Earth seen from a dark ridge. A closing illustration, not a project site.",
+    domains: {
+      "pet-healthspan": "An illustrated dog for the pet healthspan direction. It is not a study animal and not evidence of a longer life.",
+      "pet-omics": "An illustration of molecules. Omics measurements are not in the current draft.",
+      "comparative-aging": "Silhouettes of a dog, cats, and a rabbit linked by lines. They are not species profiles and are not interchangeable.",
+      "human-healthspan": "An abstract human figure. VINNO is not conducting human research.",
+      "longevity-intelligence": "Points linked into a constellation. No knowledge graph or literature index is published.",
+    },
   },
   vision: {
     index: "02",

@@ -18,7 +18,17 @@ export function RoadmapSection({ content }: { content: SiteContent }) {
         <AnimatedReveal>
           <SectionHeading id="roadmap-title" index={content.roadmap.index} title={content.roadmap.title} subtitle={content.roadmap.subtitle} />
         </AnimatedReveal>
-        <ol className="relative mt-12 space-y-4 border-l border-[var(--color-border)] pl-6">
+        <ol className="mt-10 hidden gap-3 md:grid md:grid-cols-5">
+          {phaseOrder.map((phaseId, index) => (
+            <li key={phaseId}>
+              <button type="button" onClick={() => setOpen(phaseId)} className={cn("h-full w-full border-t-2 pt-4 text-left", open === phaseId ? "border-[var(--color-primary)]" : "border-[var(--color-border)]")}>
+                <span className="text-xs tracking-[0.16em] text-[var(--color-primary)]">0{index + 1}</span>
+                <span className="mt-2 block text-sm text-[var(--color-text-primary)]">{content.roadmap.phases[phaseId].title}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+        <ol className="relative mt-8 space-y-4 border-l border-[var(--color-border)] pl-6">
           {phaseOrder.map((phaseId, index) => {
             const phase = content.roadmap.phases[phaseId];
             const expanded = open === phaseId;

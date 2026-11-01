@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { engineAnchor, engineOrder, engineStatus } from "@/config/engines";
 import type { SiteContent } from "@/content/types";
+import Image from "next/image";
+import { engineImages } from "@/lib/media";
 import { Container } from "@/components/layout/Container";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { Button } from "@/components/ui/Button";
@@ -28,13 +30,15 @@ export function EnginesSection({ content }: { content: SiteContent }) {
               const card = copy.cards[id];
               const expanded = open === id;
               return (
-                <article key={id} id={engineAnchor[id]} className="surface group relative flex flex-col overflow-hidden p-6 transition-transform duration-300 hover:-translate-y-1 md:p-7">
-                  <svg className="pointer-events-none absolute -top-6 -right-6 opacity-40 transition-opacity duration-300 group-hover:opacity-80" width="180" height="140" viewBox="0 0 180 140" aria-hidden="true">
-                    <circle cx="120" cy="36" r="28" fill="none" stroke="#46C8E8" strokeOpacity="0.45" />
-                    <circle cx="78" cy="78" r="6" fill="#67E0D1" />
-                    <circle cx="132" cy="86" r="4" fill="#7A9FE8" />
-                    <path d="M78 78 L120 36 L132 86" fill="none" stroke="#46C8E8" strokeOpacity="0.5" />
-                  </svg>
+                <article key={id} id={engineAnchor[id]} className="surface group relative flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                  <Image
+                    src={engineImages[id]}
+                    alt={id === "health" ? content.media.domains["pet-healthspan"] : id === "healthspan" ? content.media.domains["comparative-aging"] : content.media.worldAlt}
+                    width={800}
+                    height={320}
+                    className="h-40 w-full object-cover"
+                  />
+                  <div className="flex flex-1 flex-col p-6 md:p-7">
                   <div className="relative flex items-start justify-between gap-3">
                     <p className="text-xs tracking-[0.16em] text-[var(--color-primary)] uppercase">{card.position}</p>
                     <StatusBadge status={engineStatus[id]} locale={content.locale} />
@@ -58,6 +62,7 @@ export function EnginesSection({ content }: { content: SiteContent }) {
                         {card.more}
                       </p>
                     ) : null}
+                  </div>
                   </div>
                 </article>
               );

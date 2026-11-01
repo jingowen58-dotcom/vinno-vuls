@@ -26,7 +26,17 @@ export type SiteContent = {
     primary: string;
     secondary: string;
     today: string;
+    aside: string;
     visualLabel: string;
+  };
+  media: {
+    note: string;
+    heroAlt: string;
+    layersAlt: string;
+    aiAlt: string;
+    worldAlt: string;
+    horizonAlt: string;
+    domains: Record<DomainId, string>;
   };
   vision: {
     index: string;

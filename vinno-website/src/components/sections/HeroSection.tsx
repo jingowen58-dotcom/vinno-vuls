@@ -1,24 +1,21 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { HeroVisual } from "@/components/hero/HeroVisual";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import type { SiteContent } from "@/content/types";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { visuals } from "@/lib/media";
 
 export function HeroSection({ locale, content }: { locale: "en" | "zh"; content: SiteContent }) {
-  const reduced = useReducedMotion();
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 600], [0, reduced ? 0 : 28]);
   const copy = content.hero;
 
   return (
-    <section className="hero-wash relative overflow-hidden pt-28 md:pt-32" aria-labelledby="hero-title">
-      <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+    <section className="relative overflow-hidden pt-28 md:pt-32" aria-labelledby="hero-title">
+      <Image src={visuals.hero} alt={content.media.heroAlt} fill priority sizes="100vw" className="pointer-events-none object-cover object-[72%_center]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.55),rgba(7,17,31,0.9))] md:bg-[linear-gradient(90deg,#07111f_0%,rgba(7,17,31,0.9)_46%,rgba(7,17,31,0.25)_100%)]" />
       <Container className="relative">
-        <div className="grid items-center gap-8 lg:min-h-[calc(100svh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
-          <div className="max-w-2xl py-8 lg:py-16">
+        <div className="grid items-end gap-10 lg:min-h-[calc(100svh-8rem)] lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="max-w-2xl py-10 lg:py-20">
             <p className="text-xs tracking-[0.22em] text-[var(--color-primary)]">{copy.eyebrow}</p>
             <h1 id="hero-title" className="mt-5 text-[2.35rem] leading-[1.08] font-medium tracking-[-0.035em] text-[var(--color-text-primary)] sm:text-5xl lg:text-[4.15rem]">
               {copy.title}
@@ -32,9 +29,9 @@ export function HeroSection({ locale, content }: { locale: "en" | "zh"; content:
               </Button>
             </div>
           </div>
-          <motion.div style={{ y }}>
-            <HeroVisual label={copy.visualLabel} />
-          </motion.div>
+          <p className="pb-10 text-right font-display text-xl leading-snug tracking-[-0.03em] text-[var(--color-text-primary)] md:text-2xl lg:pb-20">
+            {copy.aside}
+          </p>
         </div>
       </Container>
     </section>
