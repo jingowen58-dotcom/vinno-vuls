@@ -32,7 +32,7 @@ jobs:
       - run: npm run build
         working-directory: vinno-website
         env:
-          NEXT_PUBLIC_BASE_PATH: /vinno-vuls
+          NEXT_PUBLIC_BASE_PATH: /VINNO-LIFE-SCIENCE-NETWORK
           NEXT_PUBLIC_SITE_ORIGIN: https://jingowen58-dotcom.github.io
       - uses: actions/upload-pages-artifact@v3
         with:

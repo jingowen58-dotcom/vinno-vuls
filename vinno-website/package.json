@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:pages": "NEXT_PUBLIC_BASE_PATH=/vinno-vuls NEXT_PUBLIC_SITE_ORIGIN=https://jingowen58-dotcom.github.io next build",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/VINNO-LIFE-SCIENCE-NETWORK NEXT_PUBLIC_SITE_ORIGIN=https://jingowen58-dotcom.github.io next build",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },

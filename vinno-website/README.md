@@ -27,7 +27,7 @@ npm run build
 
 `npm run build` 生成静态文件到 `out/`，资源前缀是站点根路径，适合本地打开。
 
-GitHub Pages 使用项目路径 `/vinno-vuls`：
+GitHub Pages 使用项目路径 `/VINNO-LIFE-SCIENCE-NETWORK`：
 
 ```bash
 npm run build:pages
@@ -35,11 +35,11 @@ npm run build:pages
 
 ## 发布
 
-代码在 `jingowen58-dotcom/vinno-vuls`。推送到 `main` 后，`.github/workflows/deploy-website.yml` 构建 `vinno-website` 并发布到 GitHub Pages。
+代码在 `jingowen58-dotcom/VINNO-LIFE-SCIENCE-NETWORK`。推送到 `main` 后，`.github/workflows/deploy-website.yml` 构建 `vinno-website` 并发布到 GitHub Pages。
 
 公开地址：
 
-https://jingowen58-dotcom.github.io/vinno-vuls/en/
+https://jingowen58-dotcom.github.io/VINNO-LIFE-SCIENCE-NETWORK/en/
 
 仓库的 Pages 来源需要设为 GitHub Actions。没有公布对外邮箱，页脚只链接本仓库。
 
