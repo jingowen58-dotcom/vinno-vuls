@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { domainOrder, type DomainId } from "@/config/research-domains";
+import { Photo } from "@/components/ui/Photo";
 import type { SiteContent } from "@/content/types";
 import { domainImages } from "@/lib/media";
 import { cn } from "@/lib/utils";
@@ -27,7 +27,7 @@ export function ResearchGalaxy({
               selected === id && "border-[var(--color-primary)]",
             )}
           >
-            <Image src={domainImages[id]} alt={content.media.domains[id]} width={640} height={480} className="aspect-[4/3] h-auto w-full object-cover" />
+            <Photo src={domainImages[id]} alt={content.media.domains[id]} className="aspect-[4/3] h-auto w-full object-cover" />
             <span className="block px-3 py-3">
               <span className="block text-sm text-[var(--color-text-primary)]">{content.research.domains[id].title}</span>
               <span className="mt-1 block text-xs leading-5 text-[var(--color-text-secondary)]">{content.research.domains[id].keywords[0]}</span>

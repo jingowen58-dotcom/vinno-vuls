@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { engineAnchor, engineOrder, engineStatus } from "@/config/engines";
 import type { SiteContent } from "@/content/types";
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { engineImages } from "@/lib/media";
 import { Container } from "@/components/layout/Container";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
@@ -31,11 +31,9 @@ export function EnginesSection({ content }: { content: SiteContent }) {
               const expanded = open === id;
               return (
                 <article key={id} id={engineAnchor[id]} className="surface group relative flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-                  <Image
+                  <Photo
                     src={engineImages[id]}
                     alt={id === "health" ? content.media.domains["pet-healthspan"] : id === "healthspan" ? content.media.domains["comparative-aging"] : content.media.worldAlt}
-                    width={800}
-                    height={320}
                     className="h-40 w-full object-cover"
                   />
                   <div className="flex flex-1 flex-col p-6 md:p-7">

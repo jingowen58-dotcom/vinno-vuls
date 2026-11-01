@@ -9,7 +9,7 @@ import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { defaultLayerId, layerOrder, type LayerId } from "@/config/architecture";
 import type { SiteContent } from "@/content/types";
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { visuals } from "@/lib/media";
 
 export function ArchitectureSection({ content }: { content: SiteContent }) {
@@ -35,7 +35,7 @@ export function ArchitectureSection({ content }: { content: SiteContent }) {
           <SectionHeading id="architecture-title" index={copy.index} title={copy.title} subtitle={copy.subtitle} />
         </AnimatedReveal>
         <figure className="mt-10 overflow-hidden rounded-[20px] border border-[var(--color-border)]">
-          <Image src={visuals.layers} alt={content.media.layersAlt} width={1200} height={800} className="max-h-[420px] w-full object-cover object-center" />
+          <Photo src={visuals.layers} alt={content.media.layersAlt} className="max-h-[420px] w-full object-cover object-center" />
         </figure>
         <div className="mt-8 grid gap-5 lg:grid-cols-[auto_minmax(0,0.92fr)_minmax(0,1.08fr)]" onKeyDown={onKeyDown}>
           <div className="hidden lg:block">

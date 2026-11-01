@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { aiStatus, defaultAiNodeId, type AiNodeId } from "@/config/ai";
 import type { SiteContent } from "@/content/types";
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { visuals } from "@/lib/media";
 
 export function AiResearchSection({ content }: { content: SiteContent }) {
@@ -26,7 +26,7 @@ export function AiResearchSection({ content }: { content: SiteContent }) {
         </AnimatedReveal>
         <p className="mt-8 max-w-3xl border-l border-[var(--color-ai)] pl-4 text-sm leading-6 text-[var(--color-text-secondary)]">{content.ai.concept}</p>
         <div className="mt-8 grid items-center gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <Image src={visuals.ai} alt={content.media.aiAlt} width={1280} height={720} className="aspect-video h-auto w-full rounded-[20px] border border-[var(--color-border)] object-cover" />
+          <Photo src={visuals.ai} alt={content.media.aiAlt} className="aspect-video h-auto w-full rounded-[20px] border border-[var(--color-border)] object-cover" />
           <ResearchEngineGraph selected={selected} onSelect={setSelected} content={content} />
         </div>
         <article className="surface mt-6 p-6" aria-live="polite">

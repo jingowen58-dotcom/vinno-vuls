@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+import { Photo } from "@/components/ui/Photo";
 import type { SiteContent } from "@/content/types";
 import { visuals } from "@/lib/media";
 
@@ -11,7 +11,7 @@ export function HeroSection({ locale, content }: { locale: "en" | "zh"; content:
 
   return (
     <section className="relative overflow-hidden pt-28 md:pt-32" aria-labelledby="hero-title">
-      <Image src={visuals.hero} alt={content.media.heroAlt} fill priority sizes="100vw" className="pointer-events-none object-cover object-[72%_center]" />
+      <Photo src={visuals.hero} alt={content.media.heroAlt} priority className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[72%_center]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.55),rgba(7,17,31,0.9))] md:bg-[linear-gradient(90deg,#07111f_0%,rgba(7,17,31,0.9)_46%,rgba(7,17,31,0.25)_100%)]" />
       <Container className="relative">
         <div className="grid items-end gap-10 lg:min-h-[calc(100svh-8rem)] lg:grid-cols-[1.15fr_0.85fr]">

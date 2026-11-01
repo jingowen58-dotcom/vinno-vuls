@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { SiteContent } from "@/content/types";
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { visuals } from "@/lib/media";
 
 export function OpenScienceSection({ content }: { content: SiteContent }) {
@@ -17,7 +17,7 @@ export function OpenScienceSection({ content }: { content: SiteContent }) {
         <p className="mt-8 max-w-3xl text-base leading-7 text-[var(--color-text-secondary)]">{copy.body}</p>
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-2">
           <figure>
-            <Image src={visuals.world} alt={content.media.worldAlt} width={1280} height={720} className="aspect-video h-auto w-full rounded-[20px] border border-[var(--color-border)] object-cover" />
+            <Photo src={visuals.world} alt={content.media.worldAlt} className="aspect-video h-auto w-full rounded-[20px] border border-[var(--color-border)] object-cover" />
             <figcaption className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]">{copy.mapCaption}</figcaption>
           </figure>
           <div>
